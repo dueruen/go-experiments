@@ -13,3 +13,8 @@ I have not made a client so a cli client can bu used, like [Evans](https://githu
 ```bash
 evans pkg/transport/pb/chat.proto
 ```
+
+## Auto-Generate using the proto file
+```bach
+protoc pkg/transport/pb/chat.proto --go_out=plugins=grpc:.
+```
