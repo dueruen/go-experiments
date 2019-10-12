@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package chat;
+
+service ChatService {
+    rpc WriteToChat (WriteToChatRequest) returns (WriteToChatResponse);
+    //rpc GetChat (GetChatRequest) returns (GetChatResponse);
+}
+
+message WriteToChatRequest {
+    string auther = 1;
+    string message = 2;
+}
+
+message WriteToChatResponse {
+    string auther = 1;
+    string message = 2;
+    string id = 3;
+}
+
+// message GetChatRequest {
+// }
+
+// message GetChatResponse {
+//     repeated GetChatResponseItem chat = 1;
+// }
+
+// message GetChatResponseItem {
+//     string auther = 1;
+//     string message = 2;
+//     string id = 3; 
+// }
