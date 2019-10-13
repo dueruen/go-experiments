@@ -1,0 +1,20 @@
+syntax = "proto3";
+package order_service;
+
+service OrderService {
+    rpc CreateOrder (CreateOrderRequest) returns (CreateOrderResponse);
+    rpc GetShippedOrders (GetShippedOrdersRequest) returns (GetShippedOrdersResponse);
+}
+
+message CreateOrderRequest {
+}
+
+message CreateOrderResponse {
+}
+
+message GetShippedOrdersRequest {
+}
+
+message GetShippedOrdersResponse {
+    int32 amount = 1;
+}

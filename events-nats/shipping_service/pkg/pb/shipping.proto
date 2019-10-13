@@ -1,0 +1,31 @@
+syntax = "proto3";
+package shipping_service;
+
+import "google/protobuf/timestamp.proto";
+
+service ShippingService {
+    rpc ReserveInventory (ReserveInventoryRequest) returns (ReserveInventoryResponse);
+    rpc ShipOrder (ShipOrderRequest) returns (ShipOrderResponse);
+}
+
+message ReserveInventoryRequest {
+}
+
+message ReserveInventoryResponse {
+}
+
+message ShipOrderRequest {
+}
+
+message ShipOrderResponse {
+}
+
+enum EventType {
+    INVENTORY_RESERVED = 0;
+    ORDER_SHIPPED = 1;
+}
+
+message Event {
+    EventType eventType = 1;
+    google.protobuf.Timestamp timestamp = 2;
+}
