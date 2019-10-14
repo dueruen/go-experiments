@@ -18,5 +18,6 @@ evans chat/pkg/transport/pb/chat.proto
 
 ## Auto-Generate using the proto file
 ```bach
-protoc chat/pkg/transport/pb/chat.proto --go_out=plugins=grpc:.
+cd chat/pkg/transport/pb
+protoc chat.proto --go_out=plugins=grpc:.
 ```

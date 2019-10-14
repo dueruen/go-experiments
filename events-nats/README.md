@@ -28,8 +28,10 @@ $ call GetShippedOrders
 The GetshippedOrders returns the amount of shipped orders this count is increased when the order service receives a event that the order is shipped.
 ## Auto-Generate using the proto file
 ```bach
-protoc order_service/pkg/transport/pb/order.proto --go_out=plugins=grpc:.
-protoc shipping_service/pkg/transport/pb/shipping.proto --go_out=plugins=grpc:.
+cd order_service/pkg/transport/pb
+protoc order.proto --go_out=plugins=grpc:.
+cd shipping_service/pkg/transport/pb
+protoc shipping.proto --go_out=plugins=grpc:.
 ```
 ## Stop the experiment
 ```bash
