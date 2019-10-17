@@ -17,7 +17,7 @@ go run service/api_gateway/cmd/main.go
 ## GraphQL Playground
 The GraphQL Playground is on `localhost:8081`
 Some query:
-```json
+```graphql
 mutation{createUser(input:{firstname:"WEBTEST", lastname:"LASTNAMEWEB", age:42}){firstname, lastname, age, id}}
 query{users {firstname, lastname, age, id}}
 query{houses {address, age, id, ownerId}}
