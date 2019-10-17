@@ -1,0 +1,28 @@
+# .gqlgen.yml example
+#
+# Refer to https://gqlgen.com/config/
+# for detailed .gqlgen.yml documentation.
+
+# schema:
+# - schema.graphql
+# exec:
+#   filename: generated.go
+# models:
+#   Post:
+#     model: hello-world/prisma-client.Post
+#   User:
+#     model: hello-world/prisma-client.User
+models:
+  User:
+    #model: src/github.com/dueruen/go-experiments/go-graphql/service/api_gateway/graphql.User
+    #model: src/github.com/dueruen/go-experiments/go-graphql/service/user/pkg/user.User
+    #model: User
+  #House: 
+    ##model: github.com/dueruen/go-experiments/go-graphql/service/api_gateway/graphql.House
+    #model: src/github.com/dueruen/go-experiments/go-graphql/service/house/pkg.House
+    #model: House
+  # filename: models_gen.go
+resolver:
+  filename: resolver.go
+  type: Resolver
+autobind: []

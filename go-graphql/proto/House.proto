@@ -1,8 +1,6 @@
 syntax = "proto3";
 package housingApp;
 
-import "proto/User.proto";
-
 service HouseService {
     rpc CreateHouse (CreateHouseRequest) returns (CreateHouseResponse);
     rpc ListAllHouses (ListAllHousesRequest) returns (ListAllHousesResponse);
@@ -10,14 +8,14 @@ service HouseService {
 
 message House {
     string Address = 1;
-    User Owner = 2;
+    string OwnerID = 2;
     int32 Age = 3;
     string ID = 4;
 }
 
 message CreateHouseRequest {
     string Address = 1;
-    User Owner = 2;
+    string OwnerID = 2;
     int32 Age = 3;
 }
 

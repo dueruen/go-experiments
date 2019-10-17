@@ -16,6 +16,7 @@ type User struct {
 	Age       int32
 	ID        string
 }
+
 type (
 	CreateUserRequest struct {
 		FirstName string

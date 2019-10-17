@@ -31,7 +31,7 @@ func main() {
 	)
 
 	pb.RegisterUserServiceServer(grpcServer, userService)
-	fmt.Printf("Shipping service is listening on port %s...\n", port)
+	fmt.Printf("User service is listening on port %s...\n", port)
 
 	err := grpcServer.Serve(grpcListener)
 	fmt.Println("Serve() failed", err)
